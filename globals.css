@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: url('/rail4.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #F8FAFC;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+  background-color: #1E90FF;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #1E90FF;
+  background-color: rgba(30, 144, 255, 0.15);
+}
+
+.cta-nav {
+  background-color: #3B82F6;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.cta-nav:hover {
+  background-color: #2563EB;
+  transform: scale(1.05);
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4rem 0;
+  gap: 3rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1E90FF;
+  text-shadow: 0 1px 3px rgba(16, 38, 242, 0.4);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #ADD8E6;
+  text-shadow: 0 1px 2px rgba(16, 38, 242, 0.4);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #2563EB;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1D4ED8;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  border: 2px solid #2563EB;
+  background: transparent;
+  color: #2563EB;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+.btn-outline:hover {
+  background-color: #2563EB;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #2563EB;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+.btn-secondary:hover {
+  background-color: #1D4ED8;
+  color: white;
+}
+
+/* Cards and Grids */
+.stations-grid, .facilities-grid {
+  display: grid;
+  gap: 2rem;
+  margin: 3rem 0 4rem;
+}
+
+.stations-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.facilities-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.station-card, .facility-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 16px rgba(30, 144, 255, 0.4);
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.station-card:hover,
+.facility-card:hover {
+  transform: translateY(-5px);
+}
+
+.facility-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.locations-map img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Video */
+.video-wrapper video {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(65, 31, 219, 0.5);
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  background-color: rgba(15, 23, 42, 0.9);
+  padding: 2rem 0;
+  color: #94a3b8;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-link:hover {
+  color: #E0E7FF;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+}
